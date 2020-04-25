@@ -7,7 +7,7 @@ from discord.ext import commands
 # импорт библиотек
 
 # client
-client = commands.Bot(command_prefix='.')
+client = commands.Bot(command_prefix='.', case_insensitive=True)
 
 # auto-role
 @client.event
