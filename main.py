@@ -82,7 +82,7 @@ async def cr(ctx):
 # member online
 @client.command()
 async def mon(ctx):
-    await ctx.send("All members: " + str(len(ctx.guild.members)) + "\nOnline: " + str(len(discord.Status.online)))
+    await ctx.send("All members: " + str(len(ctx.guild.members)) + "\nOnline: working on it")
 
 # random num bot
 @client.command()
@@ -94,10 +94,10 @@ async def rnb(ctx, args, rangei):
     else:
         await ctx.send('Я думал: ' + str(bot_c) + '\nЯ не угадал...')
 
-#Who am i meinfo
+# clear 2
 @client.command()
-async def meinfo(ctx):
-    await ctx.send('Ты ' + random.choice(dictionary.bad_words))
+async def clear(ctx):
+    await ctx.channel.purge()
 
 # RUN
 token = os.environ.get('BOT_TOKEN')
